@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!--start styling-->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--end styling-->
+
+    <script src="script/javascript.js" defer></script>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="start" id="start-game">START_GAME</div>
+
+    <div class="game-container blur-background">
+      <div class="cover" id="cover"></div>
+      <div class="result" id="result"></div>
+
+      <div class="question-box">
+        <div class="scoring">
+          <span id="score">Score : 0</span>
+          <span id="high-score">Height Score : 0 </span>
+          <span id="timer">Timer : 10 </span>
+        </div>
+        <div class="question">
+          <h1 class="first-value question-part">0</h1>
+          <h1 class="operator question-part" id="operator">-</h1>
+          <h1 class="second-value question-part">0</h1>
+          <h1 class="equal-sign question-part">=</h1>
+          <h1 class="question-mark question-part">?</h1>
+        </div>
+        <div id="choise">
+          Please Select the Operation Whick you want to perform .
+        </div>
+        <div class="operators">
+          <button class="multiply operator-part hover-effect">X</button>
+          <button class="divid operator-part hover-effect">/</button>
+          <button class="subtract operator-part hover-effect">-</button>
+          <button class="add operator-part hover-effect">+</button>
+          <!-- <button class="percentage operator-part hover-effect">%</button> -->
+        </div>
+      </div>
+      <div class="options">
+        <button class="option option-1" disabled>0</button>
+        <button class="option option-2" disabled>0</button>
+        <button class="option option-3" disabled>0</button>
+        <button class="option option-4" disabled>0</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button,
+a,
+i {
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.game-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.question-box {
+    flex-basis: 80%;
+    background: linear-gradient(lightpink, coral);
+    position: relative;
+}
+
+.scoring{
+    position: absolute;
+    top: 0;
+    padding: 5px 15px;
+    background: white;
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex ;
+    width: 100% ;
+    text-align: CENTER ;
+}
+.scoring span:not(:last-child){
+     border-right : 2px solid black ;
+}
+#score {
+    flex-basis: 25% ;
+}
+#height-score{
+    flex-basis: 50% ;
+}
+#timer{
+    flex-basis: 25% ;
+}
+.alert{
+    animation: alert 3s linear infinite ;
+}
+.start{
+    display: block ;
+    padding: 50px 100px ;
+    position: absolute;
+    left: 50%;
+    top: 10% ;
+    transform: translateX(-50%);
+    font-size:3rem ;
+    z-index: 111;
+    background-color: white;
+}
+.start:hover{
+    color:red ;
+    text-decoration: underline ;
+}
+.blur-background{
+    filter: blur(4px );
+}
+.cover{
+    z-index: 111;
+    position: absolute;
+    top: 0 ;
+    left: 0 ;
+    width: 100% ;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+}
+.result{
+    position: absolute;
+    width: 80% ;
+    height: 50vh;
+    top: 0;
+    opacity: 0 ;
+    font-size: 7rem ;
+    z-index: 100;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center ;
+    text-shadow: 0 0 5px black;
+    background-color: rgba(0 , 0 ,0 , 0.5);
+}
+.correct{
+    color: green ;
+}
+.hide{
+    display:none ;
+}
+.celebration {
+    animation: hide-show .4s ;
+}
+@keyframes hide-show{
+    0%{
+        opacity: 0 ;
+    }
+     100%{
+        opacity: 0.7 ;
+    }
+}
+.question {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 80px;
+}
+
+.question-part {
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.first-value {
+    color: blue;
+}
+
+.operator {
+    color: blueviolet;
+}
+
+.second-value {
+    color: brown;
+}
+
+.equal-sign {
+    color: crimson;
+}
+
+.question-mark {
+    color: red;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-basis: 20%;
+}
+
+.option {
+    cursor: pointer;
+    height: 25%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 0 5px black;
+    
+}
+
+.operators {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    background: white;
+    display: flex;
+
+}
+
+.operators button {
+    border: none;
+    flex-grow: 1;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.hover-effect:hover{
+    box-shadow: 0 0 5px 10px yellow ;
+    z-index: 10;
+}
+.option-1,
+.multiply {
+    background: rgba(0, 0, 255, 0.5);
+}
+
+.option-2,
+.divid {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.option-3,
+.percentage {
+    background: rgba(255, 255, 0, 0.5);
+}
+
+.option-4,
+.add {
+    background: rgba(255, 0, 255, 0.5);
+}
+
+.subtract {
+    background: yellow;
+}
+
+
+@keyframes alert{
+    0%{
+        transform: scale(1);
+        color: white ;
+    }
+    100%{
+        transform: scale(1.3);
+        color:red ;
+    }
+}
+#choise{
+    position: absolute;
+    left: 10%;
+    bottom: 60px ;
+}
+
